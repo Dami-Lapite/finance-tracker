@@ -1,0 +1,134 @@
+// Extra Small devices
+@mixin xs {
+  @media (min-width: #{$screen-xs-min}) {
+    @content;
+  }
+}
+
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+//Blur effect
+@mixin blur-backdrop {
+  opacity: 0.3;
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+// Colour filters for images/icons
+@mixin charcoal-filter {
+  filter: invert(0%) sepia(75%) saturate(1536%) hue-rotate(15deg)
+    brightness(101%) contrast(81%);
+}
+
+@mixin grey-filter {
+  filter: invert(58%) sepia(0%) saturate(1%) hue-rotate(171deg) brightness(92%)
+    contrast(97%);
+}
+
+@mixin light-grey-filter {
+  filter: invert(74%) sepia(11%) saturate(0%) hue-rotate(159deg) brightness(93%)
+    contrast(90%);
+}
+
+@mixin white-filter {
+  filter: invert(97%) sepia(5%) saturate(2%) hue-rotate(189deg) brightness(110%)
+    contrast(101%);
+}
+
+@mixin highlight-filter {
+  filter: invert(73%) sepia(8%) saturate(1357%) hue-rotate(128deg)
+    brightness(94%) contrast(89%);
+}
+
+@mixin image-hover-dark {
+  &:hover {
+    filter: invert(73%) sepia(8%) saturate(200%) hue-rotate(128deg)
+      brightness(94%) contrast(89%) opacity(80%);
+    translate: 0px -10px;
+  }
+}
+
+@mixin image-hover-light {
+  &:hover {
+    filter: grayscale(100%) brightness(94%) contrast(89%) opacity(90%);
+    translate: 0px -10px;
+  }
+}
+
+@mixin popover {
+  span {
+    visibility: hidden;
+    transition: all 0.3s;
+    position: absolute;
+    width: 0px;
+    left: 0px;
+    text-align: center;
+    @include exo;
+    top: -5px;
+    background-color: rgba(20, 20, 23, 0.8);
+    color: $white;
+    border-radius: 5px;
+    font-size: 0.9em;
+    height: 30px;
+    line-height: 30px;
+    @include xl {
+      top: 0px;
+    }
+  }
+
+  span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: -10px;
+    border-top: solid 10px transparent;
+    border-bottom: solid 10px transparent;
+    border-left: solid 10px rgba(20, 20, 23, 0.8);
+  }
+
+  &:hover span {
+    visibility: visible;
+    width: 200px;
+    left: -210px;
+  }
+}
+
+@mixin p-link {
+  a {
+    @include wgt-400;
+    text-decoration: underline 1px rgba(255, 255, 255, 0);
+    text-underline-offset: 1px;
+    color: $highlight;
+    &:hover {
+      text-underline-offset: 5px;
+      text-decoration: underline 1px $highlight;
+    }
+  }
+}

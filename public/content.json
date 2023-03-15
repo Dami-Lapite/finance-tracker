@@ -1,0 +1,15 @@
+{
+  "title": "finance tracker",
+  "topPanel": {
+    "about": "About this site"
+  },
+  "tableView": {
+    "categoryLabel": "Category",
+    "descriptionLabel": "Description",
+    "amountLabel": "Amount",
+    "dateLabel": "Date",
+    "clearFiltersLabel": "Clear All",
+    "filterLabel": "Filters:",
+    "sortLabel": "Sort:"
+  }
+}
