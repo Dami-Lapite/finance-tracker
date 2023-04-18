@@ -36,7 +36,7 @@ export default {
     display: flex;
     p {
       margin: auto;
-      color: #024669;
+      color: #012c42;
       @include wgt-500;
       &:hover {
         color: $highlight;

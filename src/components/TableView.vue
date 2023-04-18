@@ -310,12 +310,14 @@ export default {
           @include exo;
           font-size: 0.9em;
           @include wgt-400;
+          color: #012c42;
         }
         select {
           height: 100%;
           width: max-content;
           background-color: transparent;
           border: none;
+          color: #012c42;
           @include exo;
           font-size: 0.9em;
           @include wgt-500;
