@@ -4,6 +4,7 @@
     "about": "About this site"
   },
   "tableView": {
+    "addButtonLabel": "Add Entry",
     "categoryLabel": "Category",
     "descriptionLabel": "Description",
     "amountLabel": "Amount",

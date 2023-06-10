@@ -2,9 +2,6 @@
 import { useAppStore } from "@/stores/appStore";
 import { onMounted } from "vue";
 
-import TopPanel from "./components/TopPanel.vue";
-import TableView from "./components/TableView.vue";
-
 export default {
   setup() {
     const AppStore = useAppStore();
@@ -17,18 +14,11 @@ export default {
       AppStore,
     };
   },
-  components: {
-    TopPanel,
-    TableView,
-  },
 };
 </script>
 
 <template>
-  <div v-if="AppStore.contentLoaded" id="App">
-    <TopPanel :content="AppStore.content.topPanel" />
-    <TableView :content="AppStore.content.tableView" />
-  </div>
+  <div v-if="AppStore.contentLoaded" id="App"></div>
 </template>
 
 <style lang="scss">
@@ -47,7 +37,7 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
   * {
     transition: 0.2s;
   }
